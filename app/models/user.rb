@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :articles
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##
@@ -6,10 +7,13 @@ class User < ApplicationRecord
   ## The multiple option can be set to true if you need users to have multiple roles.       ##
   petergate(roles: [:admin, :editor], multiple: false)                                      ##
   ############################################################################################ 
- 
-
+  
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  devise :database_authenticatable, :registerable, :rememberable
+
+  def to_s
+    self.email
+  end
 end

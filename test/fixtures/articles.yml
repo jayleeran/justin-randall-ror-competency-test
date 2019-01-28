@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user_one:
+  title: User's first article
+  content: MyText
+  category: Category1
+  user: user
+
+user_two:
+  title: User's second article
+  content: MyText
+  category: Category1
+  user: user
+
+user_three:
+  title: User's third article
+  content: MyText
+  category: Category2
+  user: user
+
+editor_one:
+  title: Editor's first article
+  content: MyText
+  category: Category1
+  user: editor
+
+editor_two:
+  title: Editor's second article
+  content: MyText
+  category: Category1
+  user: editor
+
+editor_three:
+  title: Editor's third article
+  content: MyText
+  category: Category2
+  user: editor
+
+admin_one:
+  title: Admin's first article
+  content: MyText
+  category: Category1
+  user: admin
+
+admin_two:
+  title: Admin's second article
+  content: MyText
+  category: Category1
+  user: admin
+
+admin_three:
+  title: Admin's third article
+  content: MyText
+  category: Category2
+  user: admin

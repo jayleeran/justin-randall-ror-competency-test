@@ -1,0 +1,23 @@
+h1 Listing users
+
+table
+  thead
+    tr
+      th Email
+      th Roles
+      th
+      th
+      th
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.email
+        td = user.role
+        td = link_to 'Show', user
+        td = link_to 'Edit', admin_edit_user_path(user)
+        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New User', admin_new_users_path
