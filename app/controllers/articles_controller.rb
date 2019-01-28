@@ -1,9 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :check_creator_or_admin, only: [:edit, :update, :destroy]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show], [:editor, :admin] => :all
-
-  skip_before_action :authenticate_user!, only: [:index]
+  access all: [:index], user: [:show], [:editor, :admin] => :all
 
   # GET /articles
   def index
